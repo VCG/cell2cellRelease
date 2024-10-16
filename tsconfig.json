@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./static/",
+    "noImplicitAny": true,
+    "strict": true,
+    "target": "ES2021",
+    "moduleResolution": "node",
+  }
+}

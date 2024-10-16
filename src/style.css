@@ -1,0 +1,261 @@
+#canvas {
+    color: black;
+    background-color: black;
+    cursor: crosshair;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    overflow-y: auto;
+}
+
+body {
+    background-color: black;
+    font-family: "Roboto Mono, Source Code Pro, Menlo, Courier, monospace";
+}
+
+#gui {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: auto;
+    width: auto;
+    z-index: 1;
+    height: 98%;
+    overflow-y:auto;
+     -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#gui::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+#dataviz_button {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 25%;
+    left: 350px;
+    bottom: auto;
+    display: none;
+}
+
+#dataviz_wrapper {
+    position: absolute;
+    left: 420px;
+    height: 230px;
+    top: 10px;
+    width: 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: none;
+}
+
+#dataviz_wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+#dataviz_wrapper::-webkit-scrollbar-track {
+  background-color: #707070;
+}
+
+#dataviz_wrapper::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+#dataviz_container {
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: auto;
+    height: 100%;
+}
+
+
+#polarization_dataviz_wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 420px;
+    height: 300px;
+    width: 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: none;
+}
+
+#polarization_dataviz_wrapper::-webkit-scrollbar {
+    height: 10px;
+}
+
+#polarization_dataviz_wrapper::-webkit-scrollbar-track {
+    background-color: #707070;
+}
+
+#polarization_dataviz_wrapper::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+#polarization_dataviz_container {
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    height: 100%;
+}
+
+#small_dataviz_container {
+    color: white;
+    background-color: rgba(0,0,0,.0);
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    overflow-y:auto;
+    height: 175px;
+}
+
+#small_dataviz_wrapper {
+    color: white;
+    background-color: rgba(0,0,0,.0);
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    bottom: auto;
+    width: 375px;
+    overflow-y:auto;
+    height: 99%;
+    display: none;
+}
+
+#small_dataviz_wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+#small_dataviz_wrapper::-webkit-scrollbar-track {
+  background-color: #707070;
+}
+
+#small_dataviz_wrapper::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+#loading_text {
+    color: white;
+    background-color: rgba(0,0,0,.0);
+    font-family: "Roboto Mono, Source Code Pro, Menlo, Courier, monospace";
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    bottom: auto;
+    overflow-y:auto;
+    font-size: 40px;
+}
+
+#slice_view_box {
+    background-color: black;
+    top: 0%;
+    left: 0%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    display: none;
+    grid-template-areas:
+    "xy yz"
+    "xz empty";
+    background-color: rgba(0,0,0,.0);
+}
+
+#xy {
+    grid-area: xy;
+    object-fit: contain;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0,0,0,1.0);
+}
+
+#yz {
+    grid-area: yz;
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0,0,0,1.0);
+    display: none;
+}
+
+
+#xz {
+    grid-area: xz;
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0,0,0,1.0);
+    display: none;
+}
+
+#empty {
+    grid-area: empty;
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+#overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0,0,0,.0);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#progressBarContainer {
+    display: none;
+    width: 80%;
+    height: 30px;
+    background-color: grey;
+  }
+  
+#progressBar {
+    width: 1%;
+    height: 30px;
+    background-color: white;
+  }
+
+#progressBarText {
+    display: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+  }
+
+  #viewer_header {
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+    background-color: rgba(0,0,0,.0);
+    z-index: 1;
+    font-size: 25px;
+  }
+
+  #interactions_header{
+    position: absolute;
+    top: 0%;
+    left: 10px;
+    background-color: rgba(0,0,0,.0);
+    z-index: 1;
+    font-size: 25px;
+    display: none;
+  }
+
+  #interactions_header2{
+    position: absolute;
+    top: 0%;
+    left: 400px;
+    background-color: rgba(0,0,0,.0);
+    z-index: 1;
+    font-size: 25px;
+    display: none;
+  }

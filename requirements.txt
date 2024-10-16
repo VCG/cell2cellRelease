@@ -1,0 +1,16 @@
+jupyterlab
+numpy
+scikit-image
+jupyter
+tifffile
+matplotlib
+seaborn
+#cellpose
+h5py
+#hdbscan
+Flask
+#zarr
+Flask-Session
+scikit-learn
+tqdm
+pylama

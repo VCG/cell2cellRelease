@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cell Interaction Viewer</title>
+		<script defer src={{ url_for('static', filename="three.js")}}></script>
+		<script defer src={{ url_for('static', filename="app.js")}}></script>
+	</head>
+	<body style="background-color: black; color: white">
+		<div id="gui"></div>
+		<div id="canvas"></div>
+        <div id="dataviz_wrapper">
+            <svg id="dataviz_container"></svg>
+        </div>
+		<button id="dataviz_button">Download</button>
+		<div id="small_dataviz_wrapper">
+			<svg id="small_dataviz_container"></svg>
+		</div>
+		<div id="polarization_dataviz_wrapper">
+			<svg id="polarization_dataviz_container"></svg>
+		</div>
+		<div id='loading_text'>Loading...</div>
+		<div id="slice_view_box">
+		<div id="xy"></div>
+		<canvas id="overlay"></canvas>
+		<div id="xz"></div>
+		<div id="yz"></div>
+		<div id="empty"></div>
+		</div>
+	</body>
+</html>
